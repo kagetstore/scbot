@@ -1,54 +1,45 @@
-//SC ORI MHANKBARBAR
-//GUE CMN NGE UPDATE SC JAN BULY:')
-//THANKS TO
-//LOLHUMAN
-//MHANKBARBAR
-//RAFLI  MAULAN
-//FERNAZER
-//RIYAN BOTZ
-//DAN CREATOR BOT LAIN
-const {
-   WAConnection,
-   MessageType,
-   Presence,
-   MessageOptions,
-   Mimetype,
-   WALocationMessage,
-   WA_MESSAGE_STUB_TYPES,
-   ReconnectMode,
-   ProxyAgent,
-   GroupSettingChange,
-   waChatKey,
-   mentionedJid,
-   processTime,
-} = require("@adiwajshing/baileys")
-const qrcode = require("qrcode-terminal") 
-const moment = require("moment-timezone") 
-const fs = require("fs") 
-const crypto = require('crypto')
-const util = require('util')
-const imageToBase64 = require('image-to-base64')
-const axios = require('axios')
+//NEW BASE BY ZERO YT7
+//RECODE SESUKA HATIMU JANGAN HPUS CREATOR NYA
+//MAAF BASE NYA JELEK
+
+//FOLLOW ALL SOSIAL MEDIAML ME
+//YOUTUBE : Zero YT7
+//INSTAGRAM : @Zero_YT7
+//TIKTOK : @_zeroyt7
+//GITHUB : Zero-YT7
+
+const { fetchJosn, fetchText } = require('./lib/fetcher')
 const { color, bgcolor } = require('./lib/color')
-const { bahasa } = require('./lib/bahasa')
-const { negara } = require('./lib/kodenegara')
-const { donasi } = require('./lib/donasi')
-const { sewabot } = require('./lib/sewabot')
-const { rules } = require('./lib/rules')
-const { developer } = require('./lib/developer')
-const { randompict } = require('./lib/randompict')
-const { fetchJson } = require('./lib/fetcher')
-const { recognize } = require('./lib/ocr')
-const fontPath = ('./lib/Zahraaa.ttf')
-const path = require('path')
-const { exec, spawn } = require("child_process")
-const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./lib/functions')
-const tiktod = require('tiktok-scraper')
-const brainly = require('brainly-scraper')
+const { wait, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, info, success, close } = require('./lib/functions')
+
+const
+	{
+		WAConnection,
+		MessageType,
+		Presence,
+		MessageOptions,
+		Mimetype,
+		WALocationMessage,
+		WA_MESSAGE_STUB_TYPES,
+		WA_DEFAULT_EPHEMERAL,
+		ReconnectMode,
+		ProxyAgent,
+		GroupSettingChange,
+		waChatKey,
+		mentionedJid,
+		processTime,
+	} = require("@adiwajshing/baileys")
+const fs = require("fs")
+const axios = require('axios')
+const speed = require("performance-now")
+const util = require('util')
+const crypto = require('crypto')
+const request = require('request')
+const { exec, spawn } = require('child_process')
+const fetch = require('node-fetch')
+const moment = require('moment-timezone')
 const ffmpeg = require('fluent-ffmpeg')
-const cd = 4.32e+7
 const { removeBackgroundFromImageFile } = require('remove.bg')
-const { ind } = require('./bahasa')
 
 /********** MENU SETTING **********/
 const vcard = 'BEGIN:VCARD\n' //jangan ganti Sayang
@@ -262,23 +253,6 @@ function kyun(seconds){
   return `${pad(hours)} Jam ${pad(minutes)} Menit ${pad(seconds)} Detik`
 }
 /********** FUNCTION ***************/
-
-const client = new WAConnection()
-//WWEB 
-client.version = [2, 2143, 3]
-   client.on('qr', qr => {
-   qrcode.generate(qr, { small: true })
-   console.log(color('[','white'),color('∆','red'),color(']','white'),color('QR code is ready, Scan now..','white'),color('YT Riyan BOTZツ','red'),color('X','lime'),color('LolHuman','red'))
-})
-
-client.on('credentials-updated', () => {
-	const authInfo = client.base64EncodedAuthInfo()
-   console.log(`credentials updated!`)
-   fs.writeFileSync('./fernazer.json', JSON.stringify(authInfo, null, '\t'))
-})
-fs.existsSync('./gusti.json') && client.loadAuthInfo('./fernazer.json')
-client.connect();
-
 
 client.on('group-participants-update', async (anu) => {
 		if (!welkom.includes(anu.jid)) return
