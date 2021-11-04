@@ -44,6 +44,7 @@ const { removeBackgroundFromImageFile } = require('remove.bg')
 //━━━━━━━━━━━━━━━[ DATABASE ]━━━━━━━━━━━━━━━━━//
 
 const _antilink = JSON.parse(fs.readFileSync('./database/antilink.json'))
+const _antiwame = JSON.parse(fs.readFileSync('./database/antiwame.json'))
 const _antivirtex = JSON.parse(fs.readFileSync('./database/antivirtex.json'))
 const setting = JSON.parse(fs.readFileSync('./setting.json'))
 
@@ -330,6 +331,7 @@ switch (command) {
 	menunya = `✮Group Menu✮
 	✎ ${prefix}antilink
 	✎ ${prefix}welcome
+        ✎ ${prefix}antiwame
 	✎ ${prefix}antivirtex
 	✎ ${prefix}group
 	✎ ${prefix}linkgrup
