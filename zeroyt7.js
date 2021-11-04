@@ -356,7 +356,7 @@ switch (command) {
 	
 	Note : Fitur Masih Dikit Karena Baru Jadi
 	Next Update Bakal Di Tambahin
-	Jangan Lupa Subscribe Zero YT7
+	
 `
 zeroyt7.sendMessage(from, menunya, text, {quoted: ftrol})
 	break
