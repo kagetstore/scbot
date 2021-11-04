@@ -60,7 +60,6 @@ lolkey = '682aeab645ed61cf137cf971' //apiknya ya sayang
 const ownerNumber = ["6285763500823@s.whatsapp.net"]   //ganti nomor kamu sayang
 
 /*********** LOAD FILE ***********/
-const _leveling = JSON.parse(fs.readFileSync('./database/kelompok/leveling.json'))
 const antilink = JSON.parse(fs.readFileSync('./database/kelompok/antilink.json'))
 const _level = JSON.parse(fs.readFileSync('./database/pengguna/level.json'))
 const _registered = JSON.parse(fs.readFileSync('./database/bot/pengguna.json'))
