@@ -41,23 +41,7 @@ const moment = require('moment-timezone')
 const ffmpeg = require('fluent-ffmpeg')
 const { removeBackgroundFromImageFile } = require('remove.bg')
 
-/********** MENU SETTING **********/
-const vcard = 'BEGIN:VCARD\n' //jangan ganti Sayang
-            + 'VERSION:3.0\n' //jangan ganti Sayang
-            + 'FN: Kagetstore Botz\n' //ganti nama kamu sayang
-            + 'ORG: KAGETSTORE B0T;\n' //ganti nama bot kamu sayang
-            + 'TEL;type=CELL;type=VOICE;waid=6285763500823:+6285763500823\n'  //ganti nomor kamu sayang
-            + 'END:VCARD' //jangan ganti sayang
-prefix = '#' //terserah mau ganti apa gak muach
-blocked = [] //biarin aja ya sayang
-limitawal = 99999 //terserah mau ganti apa gak sayang
-memberlimit = 10 //terserah mau ganti apa gak sayang
-namabot = 'KAGETSTORE¹'
-cr = '*「 KAGETSTORE BOT」*' //ganti nama bot
-lolkey = '682aeab645ed61cf137cf971' //apiknya ya sayang
-/******** OWNER NUMBER**********/
-
-const ownerNumber = ["6285763500823@s.whatsapp.net"]   //ganti nomor kamu sayang
+//━━━━━━━━━━━━━━━[ DATABASE ]━━━━━━━━━━━━━━━━━//
 
 /*********** LOAD FILE ***********/
 const antilink = JSON.parse(fs.readFileSync('./database/kelompok/antilink.json'))
